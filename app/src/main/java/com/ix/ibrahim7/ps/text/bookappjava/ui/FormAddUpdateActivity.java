@@ -115,7 +115,6 @@ public class FormAddUpdateActivity extends AppCompatActivity
                 Jika merupakan edit setresultnya UPDATE, dan jika bukan maka setresultnya ADD
                  */
                 if (isEdit){
-                    newNote.setAuthor(note.getAuthor());
                     newNote.setId(note.getId());
                     noteHelper.update(newNote);
 
@@ -201,12 +200,5 @@ public class FormAddUpdateActivity extends AppCompatActivity
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
 
-    }
-
-    private String getCurrentDate(){
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date date = new Date();
-
-        return dateFormat.format(date);
     }
 }
